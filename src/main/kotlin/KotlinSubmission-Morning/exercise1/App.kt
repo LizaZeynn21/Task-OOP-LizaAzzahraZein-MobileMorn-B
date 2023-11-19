@@ -10,6 +10,15 @@ Lengkapi fungsi myProfile di bawah ini dengan membuat variabel dengan ketentuan 
 Dan Cetak setiap variabel ke layar saat variable myProfile di panggil
  */
 fun myProfile() {
+    val firstName: String = "Liza"
+    val lastName: String = "Zein"
+    val age: Int = 21
+    val isSingle: Boolean = false
+
+    println("Nama: $firstName $lastName")
+    println("Umur: $age tahun")
+    println("Status: ${if (isSingle) "Single" else "Not Single"}")
+
 
 }
 
@@ -19,7 +28,11 @@ fun myProfile() {
  *  Lengkapi fungsi di bawah ini agar dapat mencetak nilai dari parameter-parameter yang ada dengan fungsi println
  */
 fun groupDetail(groupId: String, groupMember: List<Any>, session: String): Any {
-    return ""
+    println("Group ID: $groupId")
+    println("Group Members: $groupMember")
+    println("Session: $session")
+
+    return "Group details printed successfully."
 }
 
 /**
@@ -29,6 +42,10 @@ fun groupDetail(groupId: String, groupMember: List<Any>, session: String): Any {
  *
  */
 fun myTeam(): List<Any> {
+    val groupMembers = listOf("Liza Azzahra Zein", "Rodhiyana", "Ary Linggar", "Fransiscus Xaverius Andika", "Randi Pratama Putra", "Camellia Qurota A'yun", "Ela Krisnawati", "Ahmad Najmi Thoriq", "Abdullah Izuddin Alhaq", "Muhadzir")
+    println("List of Group Members: $groupMembers")
+
+    return groupMembers
 
     return listOf()
 }
@@ -41,12 +58,11 @@ fun myTeam(): List<Any> {
  *
  */
 fun totalMember(): Int {
-    val mentor = arrayOf<String>()
-    val countOfGroup = arrayOf<String>()
+    val mentors = arrayOf("Peja", "Ilham")
+    val countOfGroup = 10
 
-    return 0
+    return mentors.size + countOfGroup
 }
-
 fun main() {
 
     myProfile()
@@ -62,6 +78,6 @@ fun main() {
      *  Ubah nilai argumen-argumen dari fungsi groupDetail di bawah ini sesuai dengan data group kamu
      *
      */
-    groupDetail("", listOf(), "")
+    groupDetail("10", listOf("Liza Azzahra Zein", "Rodhiyana", "Ary Linggar", "Fransiscus Xaverius Andika", "Randi Pratama Putra", "Camellia Qurota A'yun", "Ela Krisnawati", "Ahmad Najmi Thoriq", "Abdullah Izuddin Alhaq", "Muhadzir"), "Morning Session")
+    }
 
-}
